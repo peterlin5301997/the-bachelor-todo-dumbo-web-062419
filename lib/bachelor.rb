@@ -20,7 +20,14 @@ end
 
 def get_contestant_name(data, occupation)
   # code here
-
+  contestantName = ""
+  data.each do |season, contestants|
+    contestants.each do |info|
+      if info.has_key?("occupation")
+        info.values[3] == occupation
+      end
+    end
+  end
 end
 
 def count_contestants_by_hometown(data, hometown)
