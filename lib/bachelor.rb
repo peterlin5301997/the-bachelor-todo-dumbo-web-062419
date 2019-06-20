@@ -23,8 +23,8 @@ def get_contestant_name(data, occupation)
   contestantName = ""
   data.each do |season, contestants|
     contestants.each do |info|
-      if info.has_key?("occupation")
-        info.values[3] == occupation
+      if info.values[3] == occupation
+        contestantName = info.values[0]
       end
     end
   end
