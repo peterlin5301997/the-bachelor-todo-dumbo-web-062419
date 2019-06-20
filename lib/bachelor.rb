@@ -1,14 +1,11 @@
+require "pry"
 def get_first_name_of_season_winner(data, season)
   # code here
   winner = ""
   data.each do |seasons, contestants|
     if seasons == season
       contestants.each do |info, description|
-        if info == "status"
-          description.each do |value|
-            winner = value
-          end
-        end
+        binding pry
       end
     end
   end
