@@ -9,7 +9,7 @@ def get_first_name_of_season_winner(data, season)
           contestantName = info.value
         end
         if info.has_value?("Winner")
-          winner = info
+          winner = contestantName
         end
       end
     end
