@@ -72,5 +72,5 @@ def get_average_age_for_season(data, season)
     end
   end
   result = sumAge / numContestants
-  return result.ceil
+  return result.round
 end
