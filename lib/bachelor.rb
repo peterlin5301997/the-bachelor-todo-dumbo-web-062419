@@ -1,12 +1,11 @@
 require "pry"
 def get_first_name_of_season_winner(data, season)
   # code here
-  winner = data["season 10"]["name"]
   data.each do |seasons, contestants|
     if seasons == season
       contestants.each do |info|
         if info.has_value?("Winner")
-
+          winner = data[season][info]
         end
       end
     end
