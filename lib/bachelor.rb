@@ -4,7 +4,10 @@ def get_first_name_of_season_winner(data, season)
   winner = ""
   data.each do |seasons, contestants|
     if seasons == season
-      winner = contestants
+      contestants.each do |info|
+        if info.has_value?("Winner")
+          winner = data[seasons]['name']
+      end
     end
   end
   return winner
