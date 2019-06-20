@@ -7,7 +7,7 @@ def get_first_name_of_season_winner(data, season)
     if seasons == season
       contestants.each do |info|
         if info.has_key?("name")
-          contestantName = info.values[0]
+          contestantName = info.values[0].split(" ")[0]
         end
         if info.has_value?("Winner")
           winner = contestantName
